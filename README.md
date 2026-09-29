@@ -2,9 +2,15 @@
 
 基于 **Three.js** 的 3D 切水果游戏。所有水果模型、贴图、音效、背景音乐全部由代码程序化生成，**不依赖任何外部素材**。
 
+### ▶ [在线试玩](https://liyucheng1997.github.io/fruit-ninja-elemental-dojo/)
+
+电脑（鼠标）和手机（触控，支持竖屏）均可。当前版本：**v1.0.0**
+
 ## 怎么玩
 
-**直接双击 `index.html` 即可游玩**（已打包好的 `dist/game.js`，无需服务器）。
+- **在线**：打开上面的试玩链接。
+- **离线单文件**：在 [Releases](https://github.com/Liyucheng1997/fruit-ninja-elemental-dojo/releases) 下载 `play.html`，双击用浏览器打开即可。
+- **本地**：克隆仓库后直接双击 `index.html`（已打包好的 `dist/game.js`，无需服务器）。
 
 开发模式：
 
