@@ -1,0 +1,16 @@
+{
+  "name": "fruit-ninja-elemental-dojo",
+  "version": "1.0.0",
+  "description": "水果忍者 · 元素道场 —— 基于 Three.js 的 3D 切水果游戏",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test-slicer.mjs"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "three": "^0.186.1"
+  }
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#1a110c">
+  <title>水果忍者 · 元素道场</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="gl"></canvas>
+
+  <div id="ui">
+    <!-- 加载 -->
+    <div id="loading" class="screen">
+      <div class="load-logo"><span>水果</span><span class="r">忍者</span></div>
+      <div class="load-sub">元 素 道 场</div>
+      <div class="load-bar"><i id="loadFill"></i></div>
+      <div id="loadText">正在磨刀…</div>
+    </div>
+
+    <!-- 主菜单 -->
+    <div id="menu" class="screen hidden">
+      <div class="logo">
+        <div class="logo-top">FRUIT NINJA</div>
+        <h1><span>水果</span><span class="r">忍者</span></h1>
+        <h2>元 素 道 场</h2>
+      </div>
+      <div id="modes"></div>
+      <div class="menu-bottom">
+        <div class="menu-hint">按住鼠标 / 手指划过水果开始 · <b>空格</b>：心眼</div>
+        <div class="menu-bar">
+          <button class="chip" id="btnHow">玩法说明</button>
+          <button class="chip" id="btnSound">音效 开</button>
+          <button class="chip" id="btnMusic">音乐 开</button>
+          <label class="chip"><input type="checkbox" id="chkHover"> 悬停切割</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <div class="hud-left">
+        <div class="rank">
+          <span class="belt" id="rankDot"></span><b id="rankName">白带</b>
+          <i class="rank-bar"><u id="rankBar"></u></i>
+          <span id="rankNext" class="rank-next"></span>
+        </div>
+        <div class="score-row">
+          <div id="score">0</div>
+          <div id="mult" class="hidden">×2</div>
+        </div>
+        <div class="best">最高 <span id="best">0</span><span id="streak" class="streak"></span></div>
+      </div>
+
+      <div class="hud-right">
+        <div id="lives"></div>
+        <div id="timer" class="hidden">60</div>
+        <div class="hud-btns">
+          <button id="btnMute" class="round" title="静音 (M)">♪</button>
+          <button id="btnPause" class="round" title="暂停 (Esc)">❚❚</button>
+        </div>
+      </div>
+
+      <div id="bounty" class="hidden">
+        <div class="b-icon"><img id="bIcon" alt=""><span id="bGlyph"></span></div>
+        <div class="b-main">
+          <div class="b-title">悬赏令</div>
+          <div id="bText" class="b-text"></div>
+          <i class="b-bar"><u id="bBar"></u></i>
+        </div>
+        <div id="bProg" class="b-prog">0/3</div>
+      </div>
+
+      <div id="powers"></div>
+
+      <div id="focus">
+        <div class="f-row">
+          <div class="f-label">心眼</div>
+          <div class="f-bar"><i id="fFill"></i></div>
+          <div class="f-key">空格 / 右键</div>
+        </div>
+        <button id="fBtn" class="round big">眼</button>
+      </div>
+    </div>
+
+    <div id="banner" class="hidden"><b id="bannerMain"></b><span id="bannerSub"></span></div>
+    <div id="popups"></div>
+    <div id="toast"></div>
+
+    <!-- 暂停 -->
+    <div id="pause" class="screen hidden">
+      <div class="panel">
+        <h3>暂 停</h3>
+        <button class="btn" id="btnResume">继续</button>
+        <button class="btn ghost" id="btnRestart">重新开始</button>
+        <button class="btn ghost" id="btnQuit">返回主菜单</button>
+      </div>
+    </div>
+
+    <!-- 结算 -->
+    <div id="over" class="screen hidden">
+      <div class="panel wide">
+        <h3 id="overTitle">游戏结束</h3>
+        <div class="over-rank"><span class="belt" id="overDot"></span><b id="overRank">白带</b></div>
+        <div id="overScore" class="over-score">0</div>
+        <div id="overNew" class="over-new hidden">新纪录！</div>
+        <div class="over-best">最高分 <span id="overBest">0</span></div>
+        <div id="overStats" class="stats"></div>
+        <div class="over-btns">
+          <button class="btn" id="btnAgain">再来一局</button>
+          <button class="btn ghost" id="btnMenu">主菜单</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 玩法说明 -->
+    <div id="how" class="screen hidden">
+      <div class="panel how">
+        <h3>玩 法 说 明</h3>
+        <div id="howList" class="how-list"></div>
+        <button class="btn" id="btnHowClose">明白了</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dist/game.js"></script>
+</body>
+</html>
